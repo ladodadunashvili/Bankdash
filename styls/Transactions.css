@@ -369,6 +369,7 @@ table td {
 
     .main {
         flex-direction: column;
+        flex: 1;
     }
 
 }
