@@ -13,6 +13,11 @@ h2 {
 
 
 /* // main */
+.dashboard {
+    all: unset;
+}
+
+
 .main {
     display: flex;
     flex-wrap: wrap;
@@ -28,19 +33,11 @@ h2 {
     flex: 1;
     border-right: 1px solid #E6EFF5;
     gap: 5px;
+    position: sticky;
+    top: 0px;
 
 }
 
-@media screen and (max-width:762px) {
-    .manu {
-        height: 20px;
-    }
-
-    .main {
-        flex-direction: column;
-    }
-
-}
 
 .wrapper {
     display: flex;
@@ -58,6 +55,10 @@ h2 {
     padding-right: 50px;
     padding-top: 20px;
     padding-bottom: 20px;
+    position: sticky;
+    top: 0px;
+    height: 100px;
+    background-color: #ffffff;
 }
 
 
@@ -73,6 +74,9 @@ h2 {
     display: flex;
     flex-direction: column;
     flex: 1;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 50px;
 }
 
 /* //manu wrapper */
@@ -100,6 +104,7 @@ h2 {
     list-style: none;
     padding-left: 30px;
     margin: 0px;
+    color: #B1B1B1;
 }
 
 .manu__item--box {
@@ -107,6 +112,10 @@ h2 {
     display: flex;
     align-items: center;
     gap: 25px;
+    color: #1814F3;
+}
+.manu__item--box:hover {
+    cursor: pointer;
 }
 
 .manu__icon {
@@ -208,6 +217,18 @@ h2 {
     color: #ffffff;
 }
 
+.cards__wrapper--blue:hover {
+    cursor: pointer;
+    width: 353px;
+    height: 237px;
+}
+
+.cards__wrapper--whits:hover {
+    cursor: pointer;
+    width: 353px;
+    height: 237px;
+}
+
 .cards__wrapper--whits {
     background-color: #ffffff;
     padding: 20px;
@@ -263,22 +284,53 @@ h2 {
 }
 
 .table th {
+    display: flex;
     color: #718EBF;
     font-size: 16px;
     text-align: start;
 }
 
 
-.table tr {
-    padding-top: 10px;
-    padding-bottom: 10px;
+tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.table__header {
+    display: flex;
+    justify-content: space-around;
+    width: 1050px;
+    height: 19px;
+}
+
+
+table tr {
+    display: flex;
+    align-items: center;
+    width: 1050px;
+    height: 35px;
+    justify-content: space-between;
+    border-bottom: 1px solid #E6EFF5;
+}
+
+
+table td {
+    display: flex;
+    align-items: center;
 }
 
 
 .table__imgtex {
-    /* display: flex;
+    display: flex;
     align-items: center;
-    gap: 10px; */
+    gap: 10px;
 }
 
 
@@ -289,4 +341,34 @@ h2 {
     background-color: #ffffff;
     border-radius: 25px;
     padding: 25px;
+}
+
+.download__button {
+    width: 100px;
+    height: 35px;
+    border: 1px solid #123288;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    color: #123288;
+}
+
+.table__color__red {
+    color: #FE5C73;
+}
+
+.table__color__green {
+    color: #16DBAA;
+}
+
+@media screen and (max-width:762px) {
+    .manu {
+        height: 20px;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
 }
